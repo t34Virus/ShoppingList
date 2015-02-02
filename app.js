@@ -21,7 +21,6 @@ ShoppingListItem.prototype.uncheck = function( is_done ) {
 
 ShoppingListItem.prototype.render = function() {
 
-
   return '<li class="completed_' + this.is_done + '"><span>' + this.name + '</span> <span>' + this.description + '</span></li> ' 
 
 };
@@ -48,10 +47,10 @@ ShoppingList.prototype.removeItem = function( ) {
 
 ShoppingList.prototype.render = function( ) {
 
-    return '<li class="completed_' + this.is_done + '"><span>' + this.name + '</span> <span>' + this.description + '</span></li> ' 
-  
+    return '<ul>' + ShoppingListItem.render(); + '<ul>'
 
 };
+
 
 
   
